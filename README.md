@@ -1,3 +1,3 @@
 # Flask demo
 
-Run with Python 3.8. Deploy with Elastic Beanstalk
+Run with Python 3.8 and 3.9. Deploy with Elastic Beanstalk

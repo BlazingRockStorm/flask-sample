@@ -43,7 +43,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <a href="index" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>Append</h1>
@@ -58,7 +58,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="blog">Blog</a></li>
+          <li><a href="{{url_for('blog')}}">Blog</a></li>
           <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="dd-box-shadow">
               <li><a href="#">Dropdown 1</a></li>
@@ -947,7 +947,7 @@
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="blog-details">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="{{url_for('blog_details')}}">Dolorum optio tempore voluptas dignissimos</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -973,7 +973,7 @@
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="blog-details">Nisi magni odit consequatur autem nulla dolorem</a>
+                <a href="{{url_for('blog_details')}}">Nisi magni odit consequatur autem nulla dolorem</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -999,7 +999,7 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="blog-details">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+                <a href="{{url_for('blog_details')}}">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -1123,7 +1123,7 @@
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index" class="logo d-flex align-items-center">
+          <a href="{{url_for('home')}}" class="logo d-flex align-items-center">
             <span>Append</span>
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>

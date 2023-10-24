@@ -43,7 +43,7 @@
   <header id="header" class="header sticky-top d-flex align-items-center">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1>Append</h1>
@@ -58,7 +58,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="blog">Blog</a></li>
+          <li><a href="{{url_for('blog')}}">Blog</a></li>
           <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="dd-box-shadow">
               <li><a href="#">Dropdown 1</a></li>
@@ -130,9 +130,9 @@
 
               <div class="meta-top">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details">John Doe</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details">12 Comments</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{{url_for('blog_details')}}">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{{url_for('blog_details')}}"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{{url_for('blog_details')}}">12 Comments</a></li>
                 </ul>
               </div><!-- End meta top -->
 
@@ -367,7 +367,7 @@
                 <div class="post-item">
                   <img src="assets/img/blog/blog-recent-1.jpg" alt="" class="flex-shrink-0">
                   <div>
-                    <h4><a href="blog-details">Nihil blanditiis at in nihil autem</a></h4>
+                    <h4><a href="{{url_for('blog_details')}}">Nihil blanditiis at in nihil autem</a></h4>
                     <time datetime="2020-01-01">Jan 1, 2020</time>
                   </div>
                 </div><!-- End recent post item-->
@@ -375,7 +375,7 @@
                 <div class="post-item">
                   <img src="assets/img/blog/blog-recent-2.jpg" alt="" class="flex-shrink-0">
                   <div>
-                    <h4><a href="blog-details">Quidem autem et impedit</a></h4>
+                    <h4><a href="{{url_for('blog_details')}}">Quidem autem et impedit</a></h4>
                     <time datetime="2020-01-01">Jan 1, 2020</time>
                   </div>
                 </div><!-- End recent post item-->
@@ -383,7 +383,7 @@
                 <div class="post-item">
                   <img src="assets/img/blog/blog-recent-3.jpg" alt="" class="flex-shrink-0">
                   <div>
-                    <h4><a href="blog-details">Id quia et et ut maxime similique occaecati ut</a></h4>
+                    <h4><a href="{{url_for('blog_details')}}">Id quia et et ut maxime similique occaecati ut</a></h4>
                     <time datetime="2020-01-01">Jan 1, 2020</time>
                   </div>
                 </div><!-- End recent post item-->
@@ -391,7 +391,7 @@
                 <div class="post-item">
                   <img src="assets/img/blog/blog-recent-4.jpg" alt="" class="flex-shrink-0">
                   <div>
-                    <h4><a href="blog-details">Laborum corporis quo dara net para</a></h4>
+                    <h4><a href="{{url_for('blog_details')}}">Laborum corporis quo dara net para</a></h4>
                     <time datetime="2020-01-01">Jan 1, 2020</time>
                   </div>
                 </div><!-- End recent post item-->
@@ -399,7 +399,7 @@
                 <div class="post-item">
                   <img src="assets/img/blog/blog-recent-5.jpg" alt="" class="flex-shrink-0">
                   <div>
-                    <h4><a href="blog-details">Et dolores corrupti quae illo quod dolor</a></h4>
+                    <h4><a href="{{url_for('blog_details')}}">Et dolores corrupti quae illo quod dolor</a></h4>
                     <time datetime="2020-01-01">Jan 1, 2020</time>
                   </div>
                 </div><!-- End recent post item-->

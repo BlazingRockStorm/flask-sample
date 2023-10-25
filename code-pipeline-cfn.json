@@ -1,0 +1,75 @@
+{
+    "pipeline": {
+        "name": "flask",
+        "roleArn": "arn:aws:iam::xxxxxxxxxxxxxx:role/service-role/AWSCodePipelineServiceRole-ap-northeast-1-flask",
+        "artifactStore": {
+            "type": "S3",
+            "location": "codepipeline-ap-northeast-1-yyyyyyyyyyyy"
+        },
+        "stages": [
+            {
+                "name": "Source",
+                "actions": [
+                    {
+                        "name": "Source",
+                        "actionTypeId": {
+                            "category": "Source",
+                            "owner": "AWS",
+                            "provider": "CodeStarSourceConnection",
+                            "version": "1"
+                        },
+                        "runOrder": 1,
+                        "configuration": {
+                            "BranchName": "main",
+                            "ConnectionArn": "arn:aws:codestar-connections:ap-northeast-1:xxxxxxxxxxxxxx:connection/acbaf559-7328-415d-a414-a6aad1300310",
+                            "DetectChanges": "true",
+                            "FullRepositoryId": "BlazingRockStorm/flask-sample",
+                            "OutputArtifactFormat": "CODE_ZIP"
+                        },
+                        "outputArtifacts": [
+                            {
+                                "name": "SourceArtifact"
+                            }
+                        ],
+                        "inputArtifacts": [],
+                        "region": "ap-northeast-1",
+                        "namespace": "SourceVariables"
+                    }
+                ]
+            },
+            {
+                "name": "Deploy",
+                "actions": [
+                    {
+                        "name": "Deploy",
+                        "actionTypeId": {
+                            "category": "Deploy",
+                            "owner": "AWS",
+                            "provider": "ElasticBeanstalk",
+                            "version": "1"
+                        },
+                        "runOrder": 1,
+                        "configuration": {
+                            "ApplicationName": "flask-temp",
+                            "EnvironmentName": "flask-temp-dev"
+                        },
+                        "outputArtifacts": [],
+                        "inputArtifacts": [
+                            {
+                                "name": "SourceArtifact"
+                            }
+                        ],
+                        "region": "ap-northeast-1",
+                        "namespace": "DeployVariables"
+                    }
+                ]
+            }
+        ],
+        "version": 1
+    },
+    "metadata": {
+        "pipelineArn": "arn:aws:codepipeline:ap-northeast-1:xxxxxxxxxxxxxx:flask",
+        "created": "2023-10-25T03:52:35.667000+00:00",
+        "updated": "2023-10-25T03:52:35.667000+00:00"
+    }
+}

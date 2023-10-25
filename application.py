@@ -14,5 +14,9 @@ def blog():
 def blog_details():
     return render_template('blog-details.html')
 
+@application.route("/services-details/")
+def services_details():
+    return render_template('services-details.html')
+
 if __name__ == "__main__":
     application.run()
